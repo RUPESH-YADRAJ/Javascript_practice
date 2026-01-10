@@ -1,0 +1,18 @@
+.a{
+  background-color: green;
+  border-radius: 5px;
+  padding: 5px 15px
+}
+
+.b{
+ 
+  border-radius: 5px;
+  padding: 5px 45px;
+  text-transform: uppercase;;
+}
+
+.c{
+  background-color: green;
+  border-radius: 5px;
+  padding: 5px 35px;
+}

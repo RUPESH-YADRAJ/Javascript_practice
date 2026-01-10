@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="cascade.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Myntra Bag</title>
+</head>
+<body>
+  <button class="a" onclick = "
+    cartQuantity = cartQuantity+1; 
+    document.getElementById('cart-summary').innerText = `Your bag has ${cartQuantity} items`; ">Add to Bag</button>
+  <button class="b"
+    onclick = "cartQuantity = cartQuantity-1; 
+    document.getElementById('cart-summary').innerText = `Your bag has ${cartQuantity} items`;"
+  >move to wishlist</button>
+  <button class="c" 
+    onclick = "cartQuantity = cartQuantity+2; 
+    document.getElementById('cart-summary').innerText = `Your bag has ${cartQuantity} items`;"
+    >Add 1+1 scale item</button>
+  <h1 id = "cart-summary"></h1>
+  <script>
+    let cartQuantity = 0;
+    document.getElementById("cart-summary").innerText = `Your bag has ${cartQuantity} items`;
+
+  </script>
+</body>
+</html>
