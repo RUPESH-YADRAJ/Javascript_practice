@@ -46,17 +46,33 @@
 // console.log('this is kg coding'.toUpperCase());
 // console.log('this is kg coding'.replace('kg','knowledge is best'));
 
-    let a = 5;
-    let b = a;
-    console.log(` a = ${a} and b = ${b}`);
-    a = 10;
-    console.log(`a = ${a} and b = ${b}`);
+    // let a = 5;
+    // let b = a;
+    // console.log(` a = ${a} and b = ${b}`);
+    // a = 10;
+    // console.log(`a = ${a} and b = ${b}`);
 
-    let x = {num: 5};
-    let y = x;
-    console.log(` x = ${x.num} and y = ${y.num}`);
-    x.num = 8;
-    console.log(`x = ${x.num} and y = ${y.num}`);
+    // let x = {num: 5};
+    // let y = x;
+    // console.log(` x = ${x.num} and y = ${y.num}`);
+    // x.num = 8;
+    // console.log(`x = ${x.num} and y = ${y.num}`);
+
+    // let p = {pop: 'iujh'};
+    // let q = {pop: 'iujh'};
+    // //checking reference of object
+    // console.log(p == q);
+    // console.log(p === q);
+
+     let product = {
+      company : 'Manago',
+      price : 861,
+      'item-name': 'T-shirt',
+     };
+
+     let {company, price} = product;
+     console.log(company);
+     console.log(price);
   </script>
 </body>
 </html>
