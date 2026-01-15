@@ -29,14 +29,22 @@ body{
     showResult('Stump', computerChoice, resultMsg);">Stump</button>
 
   <script>
+    let scoreStr = localStorage.getItem('score');
+    if(scoreStr !== undefined){
+      score = JSON.parse(scoreStr);
+    } else {
     let score = {
       win: 0,
       loss: 0,
       tie: 0,
-      displayScore: function(){
+
+    };
+  }
+
+    score.displayScore = function(){
         return `won:${score.win}, loss: ${this.loss}, tie: ${this.tie}`;
       }
-    };
+
     function generateComputerChoice(){
       let computerChoice;
       let randomNumber = Math.random() * 3;
@@ -88,6 +96,8 @@ body{
     }
   }
   function showResult(userMove, computerMove, result) {
+
+      localStorage.setItem('score', JSON.stringify(score));
       console.log(score);
       alert(`You have chosen ${userMove}. Computer choice is ${computerMove} 
       
