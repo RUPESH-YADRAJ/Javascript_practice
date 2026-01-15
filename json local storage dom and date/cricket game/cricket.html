@@ -28,22 +28,37 @@ body{
     resultMsg = getResult('Stump', computerChoice);
     showResult('Stump', computerChoice, resultMsg);">Stump</button>
 
+  <button onclick=" localStorage.clear();
+  resetScore();"> Reset</button>
+
   <script>
     let scoreStr = localStorage.getItem('score');
-    if(scoreStr !== undefined){
-      score = JSON.parse(scoreStr);
-    } else {
-    let score = {
-      win: 0,
-      loss: 0,
-      tie: 0,
+    let score;
+    resetScore(scoreStr);
+    function resetScore(scoreStr) {
+      score =scoreStr ? JSON.parse(scoreStr) : {
+        win: 0,
+        loss: 0,
+        tie: 0,
+      };
 
-    };
-  }
-
-    score.displayScore = function(){
+      score.displayScore = function(){
         return `won:${score.win}, loss: ${this.loss}, tie: ${this.tie}`;
       }
+    }
+
+  //   if(scoreStr !== undefined){
+  //     score = JSON.parse(scoreStr);
+  //   } else {
+  //   let score = {
+  //     win: 0,
+  //     loss: 0,
+  //     tie: 0,
+
+  //   };
+  // }
+
+
 
     function generateComputerChoice(){
       let computerChoice;
