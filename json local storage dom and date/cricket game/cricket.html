@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <style>
-body{
-  text-align: center;
-}
-  </style>
+<link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cricket Game</title>
 </head>
 <body>
   <h1>Bat Ball Stump Game</h1>
+  
 
-  <button     onclick = "
+  <button   class = "choice-button"  onclick = "
     computerChoice = generateComputerChoice();
     resultMsg = getResult('Stump', computerChoice);
-    showResult('Bat', computerChoice, resultMsg);">Bat</button>
+    showResult('Bat', computerChoice, resultMsg);"><img src="images/bat.png" alt="Bat image" class = "choice-image"></button>
 
-  <button onclick="    
+  <button class = "choice-button"  onclick="    
     computerChoice = generateComputerChoice();
     resultMsg = getResult('Stump', computerChoice);
-    showResult('Ball', computerChoice, resultMsg);">Ball</button>
+    showResult('Ball', computerChoice, resultMsg);"><img src="images/ball.png" alt="Ball image" class = "choice-image"></button>
 
-  <button onclick="   
+  <button class = "choice-button"  onclick="   
     computerChoice = generateComputerChoice();
     resultMsg = getResult('Stump', computerChoice);
-    showResult('Stump', computerChoice, resultMsg);">Stump</button>
+    showResult('Stump', computerChoice, resultMsg);"><img src="images/stump.png" alt="Stump image" class = "choice-image"></button>
 
-  <button onclick=" localStorage.clear();
-  resetScore();
-  showResult();"> Reset</button>
+
 
   <h3 id = "user-move"></h3>
   <h3 id = "computer-move"></h3>
   <h3 id = "result"></h3>
   <h3 id = "score"></h3>
+
+  <button onclick=" localStorage.clear();
+  resetScore();
+  showResult();"> Reset</button>
 
   <script>
     let scoreStr = localStorage.getItem('score');
