@@ -32,10 +32,25 @@
     //   console.log(num);
     // }
 
-    let nums = [4,56,8,3,-87, 9, 78];
-    for (let index = 0; index < nums.length; index++){
-      console.log(nums[index]);
+    // let nums = [4,56,8,3,-87, 9, 78];
+    // for (let index = 0; index < nums.length; index++){
+    //   console.log(nums[index]);
+    // }
+
+    let nums = [3,6,7,9,4];
+    let sum = 0;
+    for (let i = 0 ; i < nums.length; i++){
+      sum += nums[i];
     }
+    console.log(`sum of the array is : ${sum}`);
+
+    let square = [];
+
+    for (let i = 0 ; i < nums.length; i++){
+      square[i] = nums[i] * nums[i];
+    }
+    console.log(`square of the array is : ${square}`);
+
   </script>
 </body>
 </html>
