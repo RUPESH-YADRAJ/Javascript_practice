@@ -13,11 +13,41 @@
     // arr.unshift(4);
     // console.log(arr);
 
-    function getElement(arr, position){
-      return arr[position]-1
+    // function getElement(arr, position){
+    //   return arr[position]-1
+    // }
+    // let arr = [1,2,3,4,5,6,7,8,9];
+    // console.log(getElement(arr,2));
+
+    // function arrCopy(arr){
+    //   return arr.slice(0, arr.length);
+    // }
+    // let arr = [4,5,6,7];
+    // console.log(arr.slice(1,2));
+
+        // let arr = [4,5,6,7];
+    // console.log(arrCopy(arr));
+
+    // let arr2 = arrCopy(arr);
+    // arr2[0]=null;
+    // console.log(arr);
+    // console.log(arr2);
+
+
+    function isPrime(num){
+      for( let i = 2; i < num; i++){
+        if (num % i == 0){
+          return false;
+        }
+      }
+      return true;
     }
-    let arr = [1,2,3,4,5,6,7,8,9];
-    console.log(getElement(arr,2));
+
+    console.log(isPrime(5));
+    console.log(isPrime(12));
+    console.log(isPrime(21));
+    console.log(isPrime(23));
+
 
   </script>
 </body>
