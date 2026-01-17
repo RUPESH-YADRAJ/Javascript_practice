@@ -7,12 +7,18 @@
 </head>
 <body>
   <script>
-    let arr = [5,6];
-    arr.push(7);
-    console.log(arr);
-    arr.unshift(4);
-    console.log(arr);
-    
+    // let arr = [5,6];
+    // arr.push(7);
+    // console.log(arr);
+    // arr.unshift(4);
+    // console.log(arr);
+
+    function getElement(arr, position){
+      return arr[position]-1
+    }
+    let arr = [1,2,3,4,5,6,7,8,9];
+    console.log(getElement(arr,2));
+
   </script>
 </body>
 </html>
