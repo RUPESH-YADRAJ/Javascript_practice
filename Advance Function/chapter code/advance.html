@@ -9,12 +9,28 @@
   <button id = "my-button" >click me</button>
   <script>
     let arr = [3,5,7,9];
-    for (let i = 0; i < arr.length; i++){
-      console.log(arr[i]);
+    // for (let i = 0; i < arr.length; i++){
+    //   console.log(arr[i]);
+    // }
+    // arr.forEach((num) => console.log(num));
+
+    arr.forEach(num => {
+      if (num === 5) {
+        return;
+      }
+      console.log(`visited: ${num}`);
+    })
+
+    function search(arr,num){
+      for (let i = 0; i < arr.length; i++){
+        if (arr[i] === num) {
+        console.log(`Element found at index: ${i}`);
+        return;
+        }
+      }
+      console.log('Element was not found');
     }
-    arr.forEach((num) => console.log(num));
-
-
+    search(arr,20);
 
 
 
