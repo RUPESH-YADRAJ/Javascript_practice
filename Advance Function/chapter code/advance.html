@@ -6,7 +6,28 @@
   <title>Document</title>
 </head>
 <body>
+  <button id = "my-button" >click me</button>
   <script>
+    let buttonEvent = document.querySelector('#my-button');
+    let behaviour = event => console.log('button clicked');
+    buttonEvent.addEventListener('click', behaviour);
+
+    let printDate = event => console.log(new Date());
+    buttonEvent.addEventListener('click', printDate);
+
+    buttonEvent.removeEventListener('click', behaviour);
+
+
+
+
+
+
+
+
+
+
+
+
     // let sum = function(num1, num2) {
     //   return num1 + num2;
     // }
@@ -40,13 +61,16 @@
     // setTimeout(() => console.log('subha ho gai, uth jao'), 5000);
     // console.log('Alarm set');
 
-    let alarm = () => console.log(`Wake up now! ${new Date()}`);
+    // let alarm = () => console.log(`Wake up now! ${new Date()}`);
     // let timerId = setTimeout(alarm,  5000);
     // console.log(`alarm is set with timerId: ${timerId}`); 
     // clearTimeout(timerId);
     
-    let intervalId = setInterval(alarm, 1000);
-    setTimeout(() => clearInterval(intervalId), 5000)
+    // let intervalId = setInterval(alarm, 1000);
+    // setTimeout(() => clearInterval(intervalId), 5000)
+
+
+
     </script>
 </body>
 </html>
